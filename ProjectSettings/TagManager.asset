@@ -16,6 +16,8 @@ TagManager:
   - Number8
   - Plus
   - Minus
+  - Multiply
+  - Divide
   layers:
   - Default
   - TransparentFX
