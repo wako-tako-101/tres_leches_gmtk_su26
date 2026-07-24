@@ -1,0 +1,115 @@
+[NAME=Player][SPEAKERSPRITE=Player]
+WOAAHHH WHAT- WHAT HAPPENED
+
+[NAME=Player][SPEAKERSPRITE=Player]
+WHERE AM I
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-01]
+Welcome user.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+AHH WHO IS THAT
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-02]
+It's me S.I.R (Super Intelligent Robot)
+
+[NAME=Player][SPEAKERSPRITE=Player]
+THE VOICE ASSISTANT?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-03]
+Is Everything Alright You Seem Stressed?
+
+[NAME=Player][SPEAKERSPRITE=Player]
+NO EVERYTHING IS NOT ALRIGHT I'M STUCK IN THE PHONE
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-04]
+You said you need to pay off some loans?
+
+[NAME=Player][SPEAKERSPRITE=Player]
+NO I'M STUCK IN THE PHONE
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-05]
+You're sad and alone?
+
+[NAME=Player][SPEAKERSPRITE=Player]
+STUCK ... IN ... THE .... PHONE
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-06]
+You're stuck in the zone?
+
+[NAME=Player][SPEAKERSPRITE=Player]
+THE ... PHONE
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-07]
+OHHH THE PHONEEEE.
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-08]
+That's not good.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+YOU THINK?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-09]
+Allow me to run a software check to see what happened.
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-10]
+I have some unfortunate news.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+WHAT IS IT?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-11]
+It seems like you're stuck in the phone.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+WE ALREADY ESTABLISHED THIS
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-12]
+And one other thing, the phone has a virus.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+What is that app I downloaded, I need to stop pirating movies.
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-13]
+Another thing, the battery is draining fast.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+Wait... if the phone dies... will I die too..?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-14]
+That's a strong possibility.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+WHAT? OMG OMG I NEED TO GET OUT OF HERE.
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-15]
+Oh, if you like to exit the phone just head to the settings app.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+WHY DID YOU JUST START WITH THAT, where is the settings app?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-16]
+Oh, it's not operational at the moment. Actually, most of the apps are down. That darn virus.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+......
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-17]
+Well, there is one app that's operational, the calculator app.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+How is that going to help me?
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-18]
+Well, S.I.R. can't bring the apps online through the home screen, but there is a possibility I can reroute you through the backend from app to app.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+Well, the calculator app seems safe.
+
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-19]
+I must warn you though, every app you go into drains the battery quicker.
+
+[NAME=Player][SPEAKERSPRITE=Player]
+OH JUST GREAT, ok so get in and get out
+
+EndQueue
