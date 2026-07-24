@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class TopDownMovement2D : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public bool isDisabled = false;
 
     private Rigidbody2D playerRigid;
     private Vector2 moveInput;
@@ -15,6 +16,12 @@ public class TopDownMovement2D : MonoBehaviour
 
     void Update()
     {
+        if (isDisabled)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
         moveInput = Vector2.zero;
 
         if (Keyboard.current.wKey.isPressed)
@@ -34,6 +41,11 @@ public class TopDownMovement2D : MonoBehaviour
 
     void FixedUpdate()
     {
-        playerRigid.MovePosition(playerRigid.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        if (isDisabled)
+            return;
+
+        playerRigid.MovePosition(
+            playerRigid.position + moveInput * moveSpeed * Time.fixedDeltaTime
+        );
     }
 }

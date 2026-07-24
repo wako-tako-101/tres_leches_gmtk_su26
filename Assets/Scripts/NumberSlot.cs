@@ -12,10 +12,16 @@ public class NumberSlot : MonoBehaviour
     public Color correctColor = Color.green;
     public Color multipleBoxesColor = Color.red;
 
+    public AudioSource audioSource;
+    public AudioClip boxPlacedSound;
+
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
         originalColor = spriteRenderer.color;
+        originalColor.a = 1f;
+
         UpdateSlotColor();
     }
 
@@ -24,9 +30,18 @@ public class NumberSlot : MonoBehaviour
         if (IsNumberBox(other.gameObject))
         {
             Debug.Log("Box entered");
+
             if (!boxesInside.Contains(other.gameObject))
             {
                 boxesInside.Add(other.gameObject);
+            }
+
+            if (boxesInside.Count == 1)
+            {
+                if (audioSource != null && boxPlacedSound != null)
+                {
+                    audioSource.PlayOneShot(boxPlacedSound);
+                }
             }
 
             UpdateSlotColor();
@@ -61,12 +76,20 @@ public class NumberSlot : MonoBehaviour
         else if (boxesInside.Count == 1)
         {
             currentBox = boxesInside[0];
-            spriteRenderer.color = correctColor;
+
+            Color color = correctColor;
+            color.a = 1f;
+
+            spriteRenderer.color = color;
         }
         else
         {
             currentBox = null;
-            spriteRenderer.color = multipleBoxesColor;
+
+            Color color = multipleBoxesColor;
+            color.a = 1f;
+
+            spriteRenderer.color = color;
         }
     }
 
@@ -83,6 +106,8 @@ public class NumberSlot : MonoBehaviour
                obj.CompareTag("Number8") ||
                obj.CompareTag("Number9") ||
                obj.CompareTag("Plus") ||
-               obj.CompareTag("Minus");
+               obj.CompareTag("Minus") ||
+               obj.CompareTag("Multiply") ||
+               obj.CompareTag("Divide");
     }
 }
