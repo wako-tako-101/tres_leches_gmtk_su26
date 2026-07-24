@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 [Serializable]
 public class EquationCombination
@@ -16,25 +17,36 @@ public class EquationChecker : MonoBehaviour
     public bool isFinalChallenge;
     public bool isDivisionChallenge;
 
-    public Sprite disabledButtonSprite;
-    public Sprite activeButtonSprite;
-
-    public SpriteRenderer buttonSpriteRenderer;
-
     public AudioSource audioSource;
     public AudioClip correctSound;
     public AudioClip incorrectSound;
 
     public EquationSequenceManager sequenceManager;
 
+    [Header("Slot State Events")]
+    public UnityEvent onEquationFilled;
+    public UnityEvent onEquationNotFilled;
+
     public bool EquationReady { get; private set; }
 
+    private bool lastEquationState;
+
     private bool answerSaved = false;
-    
+
     private void Start()
     {
-        buttonSpriteRenderer.sprite = disabledButtonSprite;
-        EquationReady = false;
+        EquationReady = AreAllSlotsFilled();
+
+        lastEquationState = EquationReady;
+
+        if (EquationReady)
+        {
+            onEquationFilled?.Invoke();
+        }
+        else
+        {
+            onEquationNotFilled?.Invoke();
+        }
     }
 
     private void Update()
@@ -44,28 +56,36 @@ public class EquationChecker : MonoBehaviour
 
     private void CheckIfEquationReady()
     {
+        bool currentEquationState = AreAllSlotsFilled();
+
+        EquationReady = currentEquationState;
+
+        if (currentEquationState != lastEquationState)
+        {
+            lastEquationState = currentEquationState;
+
+            if (currentEquationState)
+            {
+                onEquationFilled?.Invoke();
+            }
+            else
+            {
+                onEquationNotFilled?.Invoke();
+            }
+        }
+    }
+
+    private bool AreAllSlotsFilled()
+    {
         for (int i = 0; i < slots.Length; i++)
         {
             if (slots[i].currentBox == null)
             {
-                SetButtonInactive();
-                return;
+                return false;
             }
         }
 
-        SetButtonActive();
-    }
-
-    private void SetButtonInactive()
-    {
-        EquationReady = false;
-        buttonSpriteRenderer.sprite = disabledButtonSprite;
-    }
-
-    private void SetButtonActive()
-    {
-        EquationReady = true;
-        buttonSpriteRenderer.sprite = activeButtonSprite;
+        return true;
     }
 
     public void CheckEquation()
@@ -116,13 +136,16 @@ public class EquationChecker : MonoBehaviour
                 if (!answerSaved)
                 {
                     int answer;
-                    if(!isDivisionChallenge)
+
+                    if (!isDivisionChallenge)
                     {
                         answer = CalculateAnswer(combination.order);
-                    } else
+                    }
+                    else
                     {
                         answer = 5;
                     }
+
                     if (SaveCalculatorAnswers.Instance != null)
                     {
                         SaveCalculatorAnswers.Instance.SaveAnswer(answer);

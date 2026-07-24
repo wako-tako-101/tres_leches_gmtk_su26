@@ -7,11 +7,23 @@ public class ContinuePrompt : MonoBehaviour
     public float pulseAmount = 0.1f;
 
     private Vector3 originalScale;
+    private Coroutine pulseCoroutine;
 
-    private void Start()
+    private void OnEnable()
     {
         originalScale = transform.localScale;
-        StartCoroutine(Pulse());
+        pulseCoroutine = StartCoroutine(Pulse());
+    }
+
+    private void OnDisable()
+    {
+        if (pulseCoroutine != null)
+        {
+            StopCoroutine(pulseCoroutine);
+            pulseCoroutine = null;
+        }
+
+        transform.localScale = originalScale;
     }
 
     private IEnumerator Pulse()

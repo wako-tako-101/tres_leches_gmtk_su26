@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.IO;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 //A script by Michael O'Connell, extended by Benjamin Cohen
@@ -10,11 +10,21 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     [System.Serializable]
+    public class DialogueEvent
+    {
+        public string eventName;
+        public UnityEngine.Events.UnityEvent onEvent;
+    }
+
+    [System.Serializable]
     public class DialogueAudio
     {
         public string audioName;
         public AudioClip audioClip;
     }
+
+    [Header("Dialogue Events")]
+    public List<DialogueEvent> dialogueEvents = new List<DialogueEvent>();
 
     //Attach this script to an empty gameobject with a 2D collider set to trigger
     [Header("Dialogue Audio")]
@@ -67,7 +77,19 @@ public class DialogueTrigger : MonoBehaviour
 
         dialogue.Enqueue("EndQueue");
     }
+    public void ExecuteEvent(string eventName)
+    {
+        foreach (DialogueEvent dialogueEvent in dialogueEvents)
+        {
+            if (dialogueEvent.eventName == eventName)
+            {
+                dialogueEvent.onEvent.Invoke();
+                return;
+            }
+        }
 
+        Debug.LogWarning("No dialogue event found with name: " + eventName);
+    }
     /*Version 2: Introduces the ability to have multiple tags on a single line! Allows for more functions to be programmed
      * to unique text strings or general functions. 
      */

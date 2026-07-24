@@ -57,7 +57,6 @@ public class DialogueManager : MonoBehaviour
 
     /* ^ IMPORTANT IMPORTANT IMPORTANT IMPORTANT ^*/
 
-
     private void FreezePlayer()
     {
         playerMovement = GameObject.FindGameObjectWithTag("Player")
@@ -104,7 +103,13 @@ public class DialogueManager : MonoBehaviour
         }
         speaker.sprite = invisSprite;
     }
+    private void TriggerEvent(string eventName)
+    {
+        if (currentTrigger == null)
+            return;
 
+        currentTrigger.ExecuteEvent(eventName);
+    }
     public void StartDialogue(Queue<string> dialogue)
     {
         isInDialouge = true;
@@ -184,6 +189,19 @@ public class DialogueManager : MonoBehaviour
             );
 
             PlayDialogueAudio(audioName);
+
+            PrintDialogue();
+        }
+        else if (inputStream.Peek().Contains("[EVENT="))
+        {
+            string part = inputStream.Peek();
+
+            string eventName = inputStream.Dequeue().Substring(
+                part.IndexOf('=') + 1,
+                part.IndexOf(']') - (part.IndexOf('=') + 1)
+            );
+
+            TriggerEvent(eventName);
 
             PrintDialogue();
         }

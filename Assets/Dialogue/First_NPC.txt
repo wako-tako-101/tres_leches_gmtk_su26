@@ -67,6 +67,9 @@ WE ALREADY ESTABLISHED THIS
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-12]
 And one other thing, the phone has a virus.
 
+[AUDIO=GLITCH]
+[EVENT=START_VIRUS_GLITCH]
+
 [NAME=Player][SPEAKERSPRITE=Player]
 What is that app I downloaded, I need to stop pirating movies.
 
@@ -91,6 +94,8 @@ WHY DID YOU JUST START WITH THAT, where is the settings app?
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-16]
 Oh, it's not operational at the moment. Actually, most of the apps are down. That darn virus.
 
+[EVENT=TURN_APPS_RED]
+
 [NAME=Player][SPEAKERSPRITE=Player]
 ......
 
@@ -111,5 +116,7 @@ I must warn you though, every app you go into drains the battery quicker.
 
 [NAME=Player][SPEAKERSPRITE=Player]
 OH JUST GREAT, ok so get in and get out
+
+[EVENT=OPEN_CALCULATOR]
 
 EndQueue
