@@ -43,7 +43,7 @@ public class DialogueTrigger : MonoBehaviour
 
     // public bool useCollision; // unused for now
 
-    private void Start()
+    private void Awake()
     {
         manager = FindObjectOfType<DialogueManager>();
     }
@@ -89,6 +89,19 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         Debug.LogWarning("No dialogue event found with name: " + eventName);
+    }
+    public void ResetDialogueTrigger()
+    {
+        dialogue.Clear();
+
+        hasBeenUsed = false;
+        inArea = false;
+        nextTime = 0f;
+
+        if (manager != null && manager.currentTrigger == this)
+        {
+            manager.currentTrigger = null;
+        }
     }
     /*Version 2: Introduces the ability to have multiple tags on a single line! Allows for more functions to be programmed
      * to unique text strings or general functions. 

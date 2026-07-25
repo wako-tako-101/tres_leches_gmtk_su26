@@ -18,6 +18,8 @@ TagManager:
   - Minus
   - Multiply
   - Divide
+  - DialogueTrigger
+  - DialogueUI
   layers:
   - Default
   - TransparentFX
