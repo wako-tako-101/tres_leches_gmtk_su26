@@ -156,7 +156,6 @@ public class EquationChecker : MonoBehaviour
                 }
 
                 PlayCorrectSound();
-                SceneManager.LoadScene("Main Menu 2");
                 return;
             }
         }
@@ -198,7 +197,7 @@ public class EquationChecker : MonoBehaviour
         }
 
         PlayCorrectSound();
-
+        SceneManager.LoadScene("Main Menu 2");
         Debug.Log("YOU BEAT THIS MINIGAME YAY!");
     }
 
