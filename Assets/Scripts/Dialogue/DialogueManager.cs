@@ -205,6 +205,18 @@ public class DialogueManager : MonoBehaviour
 
             PrintDialogue();
         }
+        else if (inputStream.Peek().Contains("[WAIT="))
+        {
+            string part = inputStream.Dequeue();
+
+            string timeString = part.Substring(
+                part.IndexOf('=') + 1,
+                part.IndexOf(']') - (part.IndexOf('=') + 1));
+
+            float wait = float.Parse(timeString);
+
+            StartCoroutine(WaitThenContinue(wait));
+        }
         else
         {
             if (isScrollingText)//This deals with all the scrolling text
@@ -227,6 +239,12 @@ public class DialogueManager : MonoBehaviour
         }
 
 
+    }
+
+    private IEnumerator WaitThenContinue(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        PrintDialogue();
     }
 
     private IEnumerator TextScroll(string lineOfText)//We got a coroutine here to actually deal with the text 

@@ -4279,6 +4279,7 @@ MonoBehaviour:
   - {fileID: 589799539}
   - {fileID: 464899652}
   targetColor: {r: 1, g: 0, b: 0, a: 1}
+  transitionTime: 0.5
 --- !u!4 &1461211471
 Transform:
   m_ObjectHideFlags: 0
@@ -4871,6 +4872,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueEvents:
+  - eventName: HIDE_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventName: SHOW_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_IN
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_OUT
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventName: START_VIRUS_GLITCH
     onEvent:
       m_PersistentCalls:
@@ -4903,6 +4968,18 @@ MonoBehaviour:
     onEvent:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1461211470}
+          m_TargetAssemblyTypeName: SpriteColorChanger, Assembly-CSharp
+          m_MethodName: SetColor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
         - m_Target: {fileID: 1461211470}
           m_TargetAssemblyTypeName: SpriteColorChanger, Assembly-CSharp
           m_MethodName: SetColor
@@ -4997,6 +5074,8 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: 4fc6c1194ea8d4e4e83210e6b9372f9d, type: 3}
   - audioName: Part-19
     audioClip: {fileID: 8300000, guid: 7b23dd4aa004c3a4b97dc7b9eb9668e1, type: 3}
+  - audioName: PhoneNotification
+    audioClip: {fileID: 8300000, guid: 3ae37a0ef95b15c418ed61c872a7d465, type: 3}
   TextFileAsset: {fileID: 4900000, guid: 0b9f55a6bc2d40140b8d0b3b08b1bf9e, type: 3}
   waitTime: 0.5
   singleUseDialogue: 0
@@ -5111,8 +5190,8 @@ Transform:
   m_GameObject: {fileID: 1628227239}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2304, y: 1.3364, z: -0.020000003}
-  m_LocalScale: {x: 22.003164, y: 13.427736, z: 1}
+  m_LocalPosition: {x: 0.2304, y: 1.2997, z: -0.020000003}
+  m_LocalScale: {x: 22.003164, y: 13.501588, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6265,6 +6344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965006867893598181}
+  - component: {fileID: 965006867893598182}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -6294,6 +6374,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &965006867893598182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965006867893598180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15867b2428fa6da4bb0bdc944722e775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 965006867893598181}
+  duration: 0.25
 --- !u!1 &965006867929296841
 GameObject:
   m_ObjectHideFlags: 0
