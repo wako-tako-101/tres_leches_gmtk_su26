@@ -18,6 +18,7 @@ TagManager:
   - Minus
   - Multiply
   - Divide
+  - Umbrella
   - DialogueTrigger
   - DialogueUI
   layers:
