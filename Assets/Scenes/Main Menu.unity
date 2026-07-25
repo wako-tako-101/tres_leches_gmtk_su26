@@ -1320,6 +1320,14 @@ MonoBehaviour:
     music: {fileID: 8300000, guid: 63ceac1854e863844a553a67559098ac, type: 3}
   - sceneName: Main Menu 2
     music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+  - sceneName: Weather Scene
+    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+  - sceneName: Main Menu 3
+    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+  - sceneName: Settings
+    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+  - sceneName: Credits
+    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
 --- !u!1 &346912668
 GameObject:
   m_ObjectHideFlags: 0
