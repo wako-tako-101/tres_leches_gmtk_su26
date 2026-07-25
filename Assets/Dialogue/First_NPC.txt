@@ -1,3 +1,4 @@
+[EVENT=PAUSE_BATTERY]
 [EVENT=HIDE_DIALOGUE]
 [WAIT=2]
 [AUDIO=PhoneNotification]
@@ -145,6 +146,7 @@ I must warn you though, every app you go into drains the battery quicker.
 Oh... just great. Okay. Get in... get out.
 
 [EVENT=NOTIFICATION_OUT]
+[EVENT=RESUME_BATTERY]
 [EVENT=OPEN_CALCULATOR]
 
 EndQueue

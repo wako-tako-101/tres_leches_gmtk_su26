@@ -31,6 +31,7 @@ public class BatteryUI : MonoBehaviour
     private Image fillImage;
     private float drainTimer;
     private bool batteryDead = false;
+    private bool drainPaused = false;
 
     void Start()
     {
@@ -52,7 +53,7 @@ public class BatteryUI : MonoBehaviour
     void Update()
     {
         // Stop draining once the battery reaches 0
-        if (batteryDead)
+        if (batteryDead || drainPaused)
             return;
 
         drainTimer += Time.deltaTime;
@@ -82,7 +83,37 @@ public class BatteryUI : MonoBehaviour
             BatteryEmpty();
         }
     }
+    public void PauseBatteryDrain()
+    {
+        drainPaused = true;
+    }
 
+    public void ResumeBatteryDrain()
+    {
+        drainPaused = false;
+        drainTimer = 0f;
+    }
+    public void SetBattery(float newBatteryLevel)
+    {
+        
+        if (batteryDead)
+            return;
+
+        
+        battery = Mathf.Clamp(newBatteryLevel, 0f, 100f);
+
+        
+        drainTimer = 0f;
+
+        
+        UpdateBatteryUI();
+
+       
+        if (battery <= 0f)
+        {
+            BatteryEmpty();
+        }
+    }
     void UpdateBatteryUI()
     {
         batterySlider.value = battery;
