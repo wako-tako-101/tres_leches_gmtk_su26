@@ -26,6 +26,12 @@ public class DialogueAnimation : MonoBehaviour
     {
         StartCoroutine(Slide(shownPos, hiddenPos));
     }
+    public void ResetAnimation()
+    {
+        StopAllCoroutines();
+
+        panel.anchoredPosition = hiddenPos;
+    }
 
     IEnumerator Slide(Vector2 from, Vector2 to)
     {
