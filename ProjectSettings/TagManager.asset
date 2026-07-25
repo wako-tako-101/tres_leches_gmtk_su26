@@ -21,6 +21,9 @@ TagManager:
   - Umbrella
   - DialogueTrigger
   - DialogueUI
+  - Rain
+  - Lightning
+  - Cinematic
   layers:
   - Default
   - TransparentFX
