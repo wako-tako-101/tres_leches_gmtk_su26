@@ -15,6 +15,7 @@ Where am I?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-01]
 Welcome user.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character3]
 Who is that?
@@ -22,6 +23,7 @@ Who is that?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-02]
 It's me S.I.R (Super Intelligent Robot)
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character4]
 The voice assistant?
@@ -29,6 +31,7 @@ The voice assistant?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-03]
 Is Everything Alright You Seem Stressed?
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character5]
 No... everything is not alright. I'm stuck in the phone.
@@ -36,6 +39,7 @@ No... everything is not alright. I'm stuck in the phone.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-04]
 You said you need to pay off some loans?
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character6]
 No... I'm stuck in the phone.
@@ -43,6 +47,7 @@ No... I'm stuck in the phone.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-05]
 You're sad and alone?
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character7]
 Stuck... in... the... phone.
@@ -50,6 +55,7 @@ Stuck... in... the... phone.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-06]
 You're stuck in the zone?
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character8]
 The... phone.
@@ -57,9 +63,11 @@ The... phone.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-07]
 OHHH THE PHONEEEE.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-08]
 That's not good.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character9]
 You think?
@@ -67,9 +75,11 @@ You think?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-09]
 Allow me to run a software check to see what happened.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-10]
 I have some unfortunate news.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character10]
 What is it?
@@ -77,6 +87,7 @@ What is it?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-11]
 It seems like you're stuck in the phone.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character11]
 We already established this.
@@ -98,6 +109,7 @@ What app did I download...? I really need to stop pirating movies.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-13]
 Another thing, the battery is draining fast.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character13]
 Wait... if the phone dies... do I die...?
@@ -105,6 +117,7 @@ Wait... if the phone dies... do I die...?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-14]
 That's a strong possibility.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character14]
 What...?
@@ -112,6 +125,7 @@ What...?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-15]
 Oh, if you like to exit the phone just head to the settings app.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character15]
 Why didn't you start with that...? Where is the settings app?
@@ -119,8 +133,13 @@ Why didn't you start with that...? Where is the settings app?
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-16]
 Oh, it's not operational at the moment. Actually, most of the apps are down. That darn virus.
+[EVENT=NOTIFICATION_OUT]
 
 [EVENT=TURN_APPS_RED]
+
+[WAIT=3]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
 
 [NAME=Player][SPEAKERSPRITE=Player]
 ......
@@ -128,12 +147,15 @@ Oh, it's not operational at the moment. Actually, most of the apps are down. Tha
 [EVENT=NOTIFICATION_IN]
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-17]
 Well, there is one app that's operational, the calculator app.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character16]
 How is that going to help me?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-18]
 Well, S.I.R. can't bring the apps online through the home screen, but there is a possibility I can reroute you through the backend from app to app.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character17]
 The calculator app seems safe enough I guess.
@@ -141,6 +163,7 @@ The calculator app seems safe enough I guess.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-19]
 I must warn you though, every app you go into drains the battery quicker.
+[AUDIO=PhoneNotification]
 
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character18]
 Oh... just great. Okay. Get in... get out.

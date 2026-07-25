@@ -18,8 +18,12 @@ TagManager:
   - Minus
   - Multiply
   - Divide
+  - Umbrella
   - DialogueTrigger
   - DialogueUI
+  - Rain
+  - Lightning
+  - Cinematic
   layers:
   - Default
   - TransparentFX

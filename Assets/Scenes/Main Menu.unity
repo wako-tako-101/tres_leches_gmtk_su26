@@ -5799,6 +5799,7 @@ MonoBehaviour:
   - {fileID: 589799539}
   - {fileID: 464899652}
   targetColor: {r: 1, g: 0, b: 0, a: 1}
+  transitionTime: 0.5
 --- !u!4 &1461211471
 Transform:
   m_ObjectHideFlags: 0
@@ -6686,6 +6687,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueEvents:
+  - eventName: HIDE_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventName: SHOW_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_IN
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_OUT
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   - eventName: START_VIRUS_GLITCH
     onEvent:
       m_PersistentCalls:
@@ -6718,6 +6783,18 @@ MonoBehaviour:
     onEvent:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1461211470}
+          m_TargetAssemblyTypeName: SpriteColorChanger, Assembly-CSharp
+          m_MethodName: SetColor
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
         - m_Target: {fileID: 1461211470}
           m_TargetAssemblyTypeName: SpriteColorChanger, Assembly-CSharp
           m_MethodName: SetColor
