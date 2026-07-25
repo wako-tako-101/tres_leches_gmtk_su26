@@ -211,7 +211,8 @@ public class DialogueManager : MonoBehaviour
 
             string timeString = part.Substring(
                 part.IndexOf('=') + 1,
-                part.IndexOf(']') - (part.IndexOf('=') + 1));
+                part.IndexOf(']') - (part.IndexOf('=') + 1)
+            );
 
             float wait = float.Parse(timeString);
 
@@ -239,6 +240,60 @@ public class DialogueManager : MonoBehaviour
         }
 
 
+    }
+
+    public void ResetDialogueManager()
+    {
+        StopAllCoroutines();
+
+        if (dialogueAudioSource != null)
+        {
+            dialogueAudioSource.Stop();
+            dialogueAudioSource.clip = null;
+        }
+
+        inputStream.Clear();
+
+        levelBool = false;
+        levelIndex = 0;
+
+        isInDialouge = false;
+        isTyping = false;
+        cancelTyping = false;
+
+        currentTrigger = null;
+
+        if (DialogueUI != null)
+        {
+            DialogueUI.SetActive(false);
+        }
+
+        if (continueImage != null)
+        {
+            continueImage.SetActive(false);
+        }
+
+        if (TextBox != null)
+        {
+            TextBox.text = "";
+        }
+
+        if (NameText != null)
+        {
+            NameText.text = "";
+        }
+
+        if (speaker != null)
+        {
+            speaker.sprite = invisSprite;
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.isDisabled = false;
+        }
+
+        playerMovement = null;
     }
 
     private IEnumerator WaitThenContinue(float seconds)
@@ -315,7 +370,7 @@ public class DialogueManager : MonoBehaviour
         {
             GameObject.FindObjectOfType<GameSceneManager>().LoadScene(levelIndex);
         }
-        if (currentTrigger.singleUseDialogue)
+        if (currentTrigger != null && currentTrigger.singleUseDialogue)
         {
             currentTrigger.hasBeenUsed = true;
         }
