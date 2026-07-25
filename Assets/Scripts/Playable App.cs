@@ -60,6 +60,11 @@ public class PlayableApp : MonoBehaviour
     {
         if (!string.IsNullOrEmpty(sceneToLoad))
         {
+            if (AudioManager.Instance != null)
+            {
+                AudioManager.Instance.PlayMusicForScene("Calculator Scene");
+            }
+
             SceneManager.LoadScene(sceneToLoad);
         }
         else

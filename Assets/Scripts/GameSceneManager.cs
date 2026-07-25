@@ -5,9 +5,15 @@ public class GameSceneManager : MonoBehaviour
 {
     public static GameSceneManager Instance;
 
+    public FadeInUI fadeInUI;
+    public BatteryUI batteryUI;
+    public ShutDownEffect shutDownEffect;
+    public EventSequence eventSequence;
+    public SmoothMovePathUI smoothMovePathUI;
+    public AudioManager audioManager; 
+
     private void Awake()
     {
-        // Make sure only one GameSceneManager exists
         if (Instance == null)
         {
             Instance = this;
@@ -21,22 +27,57 @@ public class GameSceneManager : MonoBehaviour
 
     public void LoadScene(int sceneIndex)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneIndex);
     }
 
     public void LoadScene(string sceneName)
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneName);
     }
 
     public void ReloadCurrentScene()
     {
+        Time.timeScale = 1f;
+
+        if (fadeInUI != null)
+        {
+            fadeInUI.ResetFade();
+        }
+
+        if (batteryUI != null)
+        {
+            batteryUI.ResetBattery();
+        }
+
+        if (shutDownEffect != null)
+        {
+            shutDownEffect.ResetShutdown();
+        }
+
+        if (eventSequence != null)
+        {
+            eventSequence.ResetSequence();
+        }
+
+        if (smoothMovePathUI != null)
+        {
+            smoothMovePathUI.ResetMovement();
+        }
+        if (audioManager != null)
+        {
+            audioManager.RestartCurrentLevelMusic();
+        }
+
         Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(currentScene.buildIndex);
     }
 
     public void LoadNextScene()
     {
+        Time.timeScale = 1f;
+
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)

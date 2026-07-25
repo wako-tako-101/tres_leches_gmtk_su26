@@ -1,122 +1,173 @@
-[NAME=Player][SPEAKERSPRITE=Player]
-WOAAHHH WHAT- WHAT HAPPENED
+[EVENT=HIDE_DIALOGUE]
+[WAIT=2]
+[AUDIO=PhoneNotification]
+[EVENT=SHOW_DIALOGUE]
+[EVENT=NOTIFICATION_IN]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-WHERE AM I
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character1]
+What... What happened?
+[AUDIO=PhoneNotification]
+
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character2]
+Where am I?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-01]
 Welcome user.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-AHH WHO IS THAT
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character3]
+Who is that?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-02]
 It's me S.I.R (Super Intelligent Robot)
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-THE VOICE ASSISTANT?
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character4]
+The voice assistant?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-03]
 Is Everything Alright You Seem Stressed?
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-NO EVERYTHING IS NOT ALRIGHT I'M STUCK IN THE PHONE
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character5]
+No... everything is not alright. I'm stuck in the phone.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-04]
 You said you need to pay off some loans?
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-NO I'M STUCK IN THE PHONE
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character6]
+No... I'm stuck in the phone.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-05]
 You're sad and alone?
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-STUCK ... IN ... THE .... PHONE
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character7]
+Stuck... in... the... phone.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-06]
 You're stuck in the zone?
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-THE ... PHONE
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character8]
+The... phone.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-07]
 OHHH THE PHONEEEE.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-08]
 That's not good.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-YOU THINK?
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character9]
+You think?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-09]
 Allow me to run a software check to see what happened.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-10]
 I have some unfortunate news.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-WHAT IS IT?
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character10]
+What is it?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-11]
 It seems like you're stuck in the phone.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-WE ALREADY ESTABLISHED THIS
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character11]
+We already established this.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-12]
 And one other thing, the phone has a virus.
-
+[EVENT=NOTIFICATION_OUT]
 [AUDIO=GLITCH]
 [EVENT=START_VIRUS_GLITCH]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-What is that app I downloaded, I need to stop pirating movies.
+[WAIT=3]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
+
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character12]
+What app did I download...? I really need to stop pirating movies.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-13]
 Another thing, the battery is draining fast.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-Wait... if the phone dies... will I die too..?
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character13]
+Wait... if the phone dies... do I die...?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-14]
 That's a strong possibility.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-WHAT? OMG OMG I NEED TO GET OUT OF HERE.
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character14]
+What...?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-15]
 Oh, if you like to exit the phone just head to the settings app.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-WHY DID YOU JUST START WITH THAT, where is the settings app?
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character15]
+Why didn't you start with that...? Where is the settings app?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-16]
 Oh, it's not operational at the moment. Actually, most of the apps are down. That darn virus.
+[EVENT=NOTIFICATION_OUT]
 
 [EVENT=TURN_APPS_RED]
 
+[WAIT=3]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
+
 [NAME=Player][SPEAKERSPRITE=Player]
 ......
-
+[EVENT=NOTIFICATION_OUT]
+[EVENT=NOTIFICATION_IN]
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-17]
 Well, there is one app that's operational, the calculator app.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character16]
 How is that going to help me?
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-18]
 Well, S.I.R. can't bring the apps online through the home screen, but there is a possibility I can reroute you through the backend from app to app.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-Well, the calculator app seems safe.
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character17]
+The calculator app seems safe enough I guess.
+[AUDIO=PhoneNotification]
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-19]
 I must warn you though, every app you go into drains the battery quicker.
+[AUDIO=PhoneNotification]
 
-[NAME=Player][SPEAKERSPRITE=Player]
-OH JUST GREAT, ok so get in and get out
+[NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character18]
+Oh... just great. Okay. Get in... get out.
 
+[EVENT=NOTIFICATION_OUT]
 [EVENT=OPEN_CALCULATOR]
 
 EndQueue

@@ -19,6 +19,8 @@ TagManager:
   - Multiply
   - Divide
   - Umbrella
+  - DialogueTrigger
+  - DialogueUI
   layers:
   - Default
   - TransparentFX

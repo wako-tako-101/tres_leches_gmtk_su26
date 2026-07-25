@@ -205,6 +205,19 @@ public class DialogueManager : MonoBehaviour
 
             PrintDialogue();
         }
+        else if (inputStream.Peek().Contains("[WAIT="))
+        {
+            string part = inputStream.Dequeue();
+
+            string timeString = part.Substring(
+                part.IndexOf('=') + 1,
+                part.IndexOf(']') - (part.IndexOf('=') + 1)
+            );
+
+            float wait = float.Parse(timeString);
+
+            StartCoroutine(WaitThenContinue(wait));
+        }
         else
         {
             if (isScrollingText)//This deals with all the scrolling text
@@ -227,6 +240,66 @@ public class DialogueManager : MonoBehaviour
         }
 
 
+    }
+
+    public void ResetDialogueManager()
+    {
+        StopAllCoroutines();
+
+        if (dialogueAudioSource != null)
+        {
+            dialogueAudioSource.Stop();
+            dialogueAudioSource.clip = null;
+        }
+
+        inputStream.Clear();
+
+        levelBool = false;
+        levelIndex = 0;
+
+        isInDialouge = false;
+        isTyping = false;
+        cancelTyping = false;
+
+        currentTrigger = null;
+
+        if (DialogueUI != null)
+        {
+            DialogueUI.SetActive(false);
+        }
+
+        if (continueImage != null)
+        {
+            continueImage.SetActive(false);
+        }
+
+        if (TextBox != null)
+        {
+            TextBox.text = "";
+        }
+
+        if (NameText != null)
+        {
+            NameText.text = "";
+        }
+
+        if (speaker != null)
+        {
+            speaker.sprite = invisSprite;
+        }
+
+        if (playerMovement != null)
+        {
+            playerMovement.isDisabled = false;
+        }
+
+        playerMovement = null;
+    }
+
+    private IEnumerator WaitThenContinue(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        PrintDialogue();
     }
 
     private IEnumerator TextScroll(string lineOfText)//We got a coroutine here to actually deal with the text 
@@ -297,7 +370,7 @@ public class DialogueManager : MonoBehaviour
         {
             GameObject.FindObjectOfType<GameSceneManager>().LoadScene(levelIndex);
         }
-        if (currentTrigger.singleUseDialogue)
+        if (currentTrigger != null && currentTrigger.singleUseDialogue)
         {
             currentTrigger.hasBeenUsed = true;
         }
