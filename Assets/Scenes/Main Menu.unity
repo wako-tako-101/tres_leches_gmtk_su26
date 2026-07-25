@@ -5727,7 +5727,7 @@ MonoBehaviour:
   yellowColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   redColor: {r: 1, g: 0, b: 0, a: 1}
   battery: 100
-  drainInterval: 2
+  drainInterval: 0.1
   gameOverScreen: {fileID: 390656469}
   chargeSymbol: {fileID: 914362621}
   flashSpeed: 0.5
@@ -6811,6 +6811,70 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_IN
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationIn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: NOTIFICATION_OUT
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598182}
+          m_TargetAssemblyTypeName: DialogueAnimation, Assembly-CSharp
+          m_MethodName: NotificationOut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: SHOW_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+  - eventName: HIDE_DIALOGUE
+    onEvent:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 965006867893598180}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
   dialogueAudio:
   - audioName: Part-01
@@ -8482,6 +8546,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965006867893598181}
+  - component: {fileID: 965006867893598182}
   m_Layer: 5
   m_Name: Dialogue
   m_TagString: Untagged
@@ -8511,6 +8576,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 68}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &965006867893598182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965006867893598180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15867b2428fa6da4bb0bdc944722e775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 965006867893598181}
+  duration: 0.25
 --- !u!1 &965006867929296841
 GameObject:
   m_ObjectHideFlags: 0

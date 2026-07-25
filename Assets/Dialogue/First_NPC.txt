@@ -83,7 +83,7 @@ We already established this.
 
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-12]
 And one other thing, the phone has a virus.
-
+[EVENT=NOTIFICATION_OUT]
 [AUDIO=GLITCH]
 [EVENT=START_VIRUS_GLITCH]
 
@@ -123,7 +123,8 @@ Oh, it's not operational at the moment. Actually, most of the apps are down. Tha
 
 [NAME=Player][SPEAKERSPRITE=Player]
 ......
-
+[EVENT=NOTIFICATION_OUT]
+[EVENT=NOTIFICATION_IN]
 [NAME=S.I.R][SPEAKERSPRITE=S.I.R][AUDIO=Part-17]
 Well, there is one app that's operational, the calculator app.
 
@@ -143,6 +144,7 @@ I must warn you though, every app you go into drains the battery quicker.
 [NAME=Player][SPEAKERSPRITE=Player][AUDIO=Character18]
 Oh... just great. Okay. Get in... get out.
 
+[EVENT=NOTIFICATION_OUT]
 [EVENT=OPEN_CALCULATOR]
 
 EndQueue
