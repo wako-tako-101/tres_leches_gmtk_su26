@@ -1,0 +1,131 @@
+[EVENT=PAUSE_BATTERY]
+[WAIT=2]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
+
+[NAME=Player][SPEAKERSPRITE=Player]
+Finally! I'm out!
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Congratulations!
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Don't sound excited, you really had me doing homework in there.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+I know! Isn't it so much fun? I love hanging around there when you're away from the phone.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+You are a strange machine, you know that right?
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Says the one that got trapped in the phone.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Excuse me.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Good news! I brought another app online!
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+The settings app?
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+No.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Of course not.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+The weather app.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+What am I supposed to do? Collect water droplets and avoid lightning bolts?
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+No don't be silly.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+You're the one who sent me to the calculator!
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+And look how well that turned out.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Also, I managed to restore your battery to 75%.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Why not 100%? Can't you do anything right, you worthless piece of software?
+
+[EVENT=NOTIFICATION_OUT]
+[WAIT=3]
+[EVENT=DRAIN_BATTERY]
+[WAIT=2]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
+
+
+[NAME=Player][SPEAKERSPRITE=Player]
+Why is that battery at 5%?!
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Apologize.
+
+[EVENT=NOTIFICATION_IN]
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+What?
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Say you're sorry.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Fine, fine. I'm sorry?
+
+[EVENT=NOTIFICATION_OUT]
+[WAIT=3]
+[EVENT=RESTORE_BATTERY]
+[WAIT=2]
+[EVENT=NOTIFICATION_IN]
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+THANK YOU! Okay I opened the weather app. Good luck!
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Psycho.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+What's that?
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Thank you so much!
+
+[EVENT=RESUME_BATTERY]
+[EVENT=NOTIFICATION_OUT]
+[EVENT=OPEN_WEATHER]
+
+EndQueue

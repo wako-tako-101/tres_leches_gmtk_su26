@@ -10,7 +10,9 @@ public class FallingItem : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.down * fallSpeed * Time.deltaTime;
-        if (transform.position.y < -6f) Destroy(gameObject); // missed
+
+        if (transform.position.y < -6f)
+            Destroy(gameObject); // missed
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -18,12 +20,18 @@ public class FallingItem : MonoBehaviour
         if (other.CompareTag("Umbrella"))
         {
             Debug.Log("Hit by: " + type);
+
             if (type == ItemType.Rain)
+            {
+                WeatherAudioManager.Instance.PlayRainSplash();
                 GameManager.Instance.AddRain();
+            }
             else if (type == ItemType.Lightning)
-                GameManager.Instance.HitByLightning();
-            else
-                GameManager.Instance.HitByLightning();
+            {
+                WeatherAudioManager.Instance.PlayLightningStruck();
+                WeatherAudioManager.Instance.PlayBatteryDraining();
+                GameManager.Instance.HitByLightning(transform.position);
+            }
 
             Destroy(gameObject);
         }

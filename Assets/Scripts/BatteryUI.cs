@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class BatteryUI : MonoBehaviour
 {
+    public static BatteryUI Instance;
+
     [Header("Battery UI")]
     public Slider batterySlider;
     public TextMeshProUGUI batteryText;
@@ -32,6 +34,19 @@ public class BatteryUI : MonoBehaviour
     private float drainTimer;
     private bool batteryDead = false;
     private bool drainPaused = false;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
@@ -140,6 +155,12 @@ public class BatteryUI : MonoBehaviour
             return;
 
         batteryDead = true;
+
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.StopWeatherGame();
+        }
 
         // EVENTS BEFORE GAME OVER SCREEN
         onBatteryEmpty.Invoke();
