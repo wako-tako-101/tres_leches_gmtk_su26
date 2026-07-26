@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MazeExit : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class MazeExit : MonoBehaviour
     public AudioClip secondAudio;
     public float secondAudioDelay = 1f;
 
+
+    public float delayTillSceneChange = 3f;
 
 
     private void Start()
@@ -68,6 +71,16 @@ public class MazeExit : MonoBehaviour
         {
             audioSource.PlayOneShot(secondAudio);
         }
+
+        yield return new WaitForSeconds(secondAudioDelay);
+
+        if (AudioManager.Instance != null)
+        {
+                AudioManager.Instance.PlayMusicForScene(sceneToLoad);
+        }
+
+        SceneManager.LoadScene("Outro_Scene");
+        
         yield return null;
     }
 }
