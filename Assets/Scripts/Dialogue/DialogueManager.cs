@@ -295,7 +295,6 @@ public class DialogueManager : MonoBehaviour
 
         playerMovement = null;
     }
-
     private IEnumerator WaitThenContinue(float seconds)
     {
         yield return new WaitForSeconds(seconds);
@@ -361,19 +360,22 @@ public class DialogueManager : MonoBehaviour
         isInDialouge = false;
         cancelTyping = false;
         isTyping = false;
-        // isOpen = false;
+
         if (freezePlayerOnDialogue)
         {
             UnFreezePlayer();
         }
+
         if (levelBool)
         {
             GameObject.FindObjectOfType<GameSceneManager>().LoadScene(levelIndex);
         }
+
         if (currentTrigger != null && currentTrigger.singleUseDialogue)
         {
             currentTrigger.hasBeenUsed = true;
         }
+
         inputStream.Clear();
     }
 }

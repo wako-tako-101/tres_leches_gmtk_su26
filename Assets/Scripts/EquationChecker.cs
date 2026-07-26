@@ -197,6 +197,10 @@ public class EquationChecker : MonoBehaviour
         }
 
         PlayCorrectSound();
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayMusicForScene("Main Menu 2");
+        }
         SceneManager.LoadScene("Main Menu 2");
         Debug.Log("YOU BEAT THIS MINIGAME YAY!");
     }

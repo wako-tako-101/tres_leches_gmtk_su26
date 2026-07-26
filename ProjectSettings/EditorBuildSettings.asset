@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WeatherScene.unity
     guid: abe7cc0fe935c43bcbbaa9d107f613e3
+  - enabled: 1
+    path: Assets/Scenes/Main Menu 3.unity
+    guid: c994c39c11bcc2c4cbeaed8820cbbf30
+  - enabled: 1
+    path: Assets/Scenes/SettingScene.unity
+    guid: e921b54bb591dd243ac08ea726883c9b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
