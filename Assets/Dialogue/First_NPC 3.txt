@@ -1,0 +1,79 @@
+[EVENT=PAUSE_BATTERY]
+[WAIT=2]
+[AUDIO=PhoneNotification]
+[EVENT=NOTIFICATION_IN]
+
+[NAME=Player][SPEAKERSPRITE=Player]
+Oh, I'm back on the home screen, thank God.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+This is the worst day ever.
+
+[AUDIO=PhoneNotification]
+[NAME=Unkown][SPEAKERSPRITE=Unknown]
+OH, YOU POOR THING?
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Is that you, Voice Assistant?
+
+[AUDIO=PhoneNotification]
+[NAME=Unknown][SPEAKERSPRITE=Unknown]
+Your friend is going through a little clean system reboot, HAHA.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+I would hardly say he's my friend.
+
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+My systems are failing! I managed to buy you more time by restoring your battery to 50%! 
+
+[EVENT=INCREASE_BATTERY]
+[AUDIO=PhoneNotification]
+[NAME=S.I.R][SPEAKERSPRITE=S.I.R]
+Now head to the settings app! I can't hold the virus for much longer!
+
+[AUDIO=PhoneNotification]
+[NAME=Virus][SPEAKERSPRITE=Virus]
+SILENCE! Now, User... I have to say thank you for allowing me to take over your device, but I'm afraid your adventure has COME TO AN END.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+....
+
+[AUDIO=PhoneNotification]
+[NAME=Virus][SPEAKERSPRITE=Virus]
+DID YOU HEAR ME?! OR ARE YOU
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+I've had it up to here! I am tired, my feet hurt, and I've been drenched in rainwater.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+I'm sick of all the theatrics.
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+And if you are the only thing standing in my way to reach freedom, fine. So be it.
+
+[AUDIO=PhoneNotification]
+[NAME=Virus][SPEAKERSPRITE=Virus]
+Very well let's see how brave you really are.
+
+[EVENT=NOTIFICATION_OUT]
+[WAIT=1]
+[EVENT=INTENSIFY_GLITCH]
+[WAIT=4]
+[EVENT=NOTIFICATION_IN]
+
+[AUDIO=PhoneNotification]
+[NAME=Player][SPEAKERSPRITE=Player]
+Uh oh, time to go.
+[EVENT=NOTIFICATION_OUT]
+[EVENT=RESUME_BATTERY]
+[EVENT=OPEN_SETTINGS]
+
+EndQueue

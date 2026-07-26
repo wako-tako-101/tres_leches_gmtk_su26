@@ -6,16 +6,33 @@ public class FadeInUI : MonoBehaviour
     public CanvasGroup canvasGroup;
     public float fadeDuration = 1f;
 
+    private Coroutine fadeCoroutine;
+
     public void FadeIn()
     {
-        StartCoroutine(Fade());
+        StartFade(0f, 1f);
     }
 
-    private IEnumerator Fade()
+    public void FadeOut()
+    {
+        StartFade(1f, 0f);
+    }
+
+    private void StartFade(float startAlpha, float targetAlpha)
+    {
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+        }
+
+        fadeCoroutine = StartCoroutine(Fade(startAlpha, targetAlpha));
+    }
+
+    private IEnumerator Fade(float startAlpha, float targetAlpha)
     {
         float elapsedTime = 0f;
 
-        canvasGroup.alpha = 0f;
+        canvasGroup.alpha = startAlpha;
 
         while (elapsedTime < fadeDuration)
         {
@@ -23,20 +40,41 @@ public class FadeInUI : MonoBehaviour
 
             float t = elapsedTime / fadeDuration;
 
-            // Smooth fade
             t = Mathf.SmoothStep(0f, 1f, t);
 
-            canvasGroup.alpha = t;
+            canvasGroup.alpha = Mathf.Lerp(
+                startAlpha,
+                targetAlpha,
+                t
+            );
 
             yield return null;
         }
 
-        canvasGroup.alpha = 1f;
+        canvasGroup.alpha = targetAlpha;
+
+        fadeCoroutine = null;
     }
+
     public void ResetFade()
     {
-        StopAllCoroutines();
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+            fadeCoroutine = null;
+        }
 
         canvasGroup.alpha = 0f;
+    }
+
+    public void ResetFull()
+    {
+        if (fadeCoroutine != null)
+        {
+            StopCoroutine(fadeCoroutine);
+            fadeCoroutine = null;
+        }
+
+        canvasGroup.alpha = 1f;
     }
 }

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class BatteryUI : MonoBehaviour
 {
@@ -172,10 +173,40 @@ public class BatteryUI : MonoBehaviour
     {
         StopAllCoroutines();
 
-        battery = 100f;
         drainTimer = 0f;
         batteryDead = false;
+        drainPaused = false;
 
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        switch (currentScene)
+        {
+            case "Main Level":
+            case "Calculator Scene":
+                battery = 100f;
+                break;
+
+            case "Main Menu 2":
+            case "WeatherScene":
+                battery = 75f;
+                break;
+
+            case "Main Menu 3":
+            case "SettingScene":
+                battery = 50f;
+                break;
+
+            default:
+                // Fallback if the scene isn't listed
+                battery = 100f;
+                Debug.LogWarning(
+                    "Battery reset in an unrecognized scene: " + currentScene +
+                    ". Defaulting to 100%."
+                );
+                break;
+        }
+
+        
         if (gameOverScreen != null)
         {
             gameOverScreen.SetActive(false);
@@ -187,6 +218,10 @@ public class BatteryUI : MonoBehaviour
         }
 
         UpdateBatteryUI();
+
+        Debug.Log(
+            "Battery reset to " + battery + "% in scene: " + currentScene
+        );
     }
     IEnumerator GameOverSequence()
     {
