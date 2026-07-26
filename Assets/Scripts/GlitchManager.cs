@@ -28,9 +28,17 @@ public class GlitchManager : MonoBehaviour
     [Range(0f, 20f)]
     public float glitchSpeed = 10f;
 
+    [Header("Intensify Settings")]
+    public float intensityIncrease = 0.01f;
+    public float chromaticIncrease = 0.005f;
+    public float amountIncrease = 0.1f;
+    public float speedIncrease = 2f;
+    public float durationIncrease = 0.1f;
+
     private Material[] originalMaterials;
     private Coroutine currentGlitch;
     private Coroutine timedGlitchRoutine;
+
 
     private void Start()
     {
@@ -133,5 +141,22 @@ public class GlitchManager : MonoBehaviour
 
             phoneSprites[i].sharedMaterial = originalMaterials[i];
         }
+    }
+    public void IntensifyGlitch()
+    {
+        glitchIntensity += intensityIncrease;
+        chromaticAberration += chromaticIncrease;
+        glitchAmount += amountIncrease;
+        glitchSpeed += speedIncrease;
+        glitchDuration += durationIncrease;
+
+        
+        glitchIntensity = Mathf.Clamp(glitchIntensity, 0f, 0.1f);
+        chromaticAberration = Mathf.Clamp(chromaticAberration, 0f, 0.05f);
+        glitchAmount = Mathf.Clamp(glitchAmount, 0f, 1f);
+        glitchSpeed = Mathf.Clamp(glitchSpeed, 0f, 20f);
+
+        
+        TriggerGlitch();
     }
 }

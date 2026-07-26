@@ -802,13 +802,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29
-  m_fontSizeBase: 29
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -841,7 +841,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 665.6014, y: 49.216602, z: 502.12457, w: 55.875656}
+  m_margin: {x: 665.6014, y: 49.216602, z: 587.90784, w: 55.875656}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1400,9 +1400,9 @@ MonoBehaviour:
   - sceneName: WeatherScene
     music: {fileID: 8300000, guid: 609a126e142583c47a0153736805e605, type: 3}
   - sceneName: Main Menu 3
-    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+    music: {fileID: 8300000, guid: 93b3c8067c0345448a8480abf006ee4d, type: 3}
   - sceneName: Settings
-    music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
+    music: {fileID: 8300000, guid: f1d606f7649e3df49b92b6e63c2ef2db, type: 3}
   - sceneName: Credits
     music: {fileID: 8300000, guid: bee539dc2cf75004eb6b85401541ffc5, type: 3}
 --- !u!1 &346912668
@@ -3184,6 +3184,11 @@ MonoBehaviour:
   chromaticAberration: 0.01
   glitchAmount: 0.5
   glitchSpeed: 10
+  intensityIncrease: 0.01
+  chromaticIncrease: 0.005
+  amountIncrease: 0.1
+  speedIncrease: 2
+  durationIncrease: 0.1
 --- !u!4 &959441214
 Transform:
   m_ObjectHideFlags: 0
@@ -8324,8 +8329,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3535473601529558972, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2058101828}
   m_SourcePrefab: {fileID: 100100000, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3, type: 3}
+--- !u!1 &2058101827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3535473601529558972, guid: 9c993bdd1f0fb3e4da5b61dabec5fbb3, type: 3}
+  m_PrefabInstance: {fileID: 2058101826}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2058101828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058101827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fd6b753e447dd847ae4c66a13e22b02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectsToDisableInSettings:
+  - {fileID: 2058101827}
+  - {fileID: 374152468}
 --- !u!1 &2060425151
 GameObject:
   m_ObjectHideFlags: 0
@@ -8366,6 +8394,11 @@ MonoBehaviour:
   chromaticAberration: 0.01
   glitchAmount: 0.5
   glitchSpeed: 10
+  intensityIncrease: 0.01
+  chromaticIncrease: 0.005
+  amountIncrease: 0.1
+  speedIncrease: 2
+  durationIncrease: 0.1
 --- !u!4 &2060425153
 Transform:
   m_ObjectHideFlags: 0
