@@ -76,10 +76,10 @@ public class MazeExit : MonoBehaviour
 
         if (AudioManager.Instance != null)
         {
-                AudioManager.Instance.PlayMusicForScene(sceneToLoad);
+                AudioManager.Instance.PlayMusicForScene("Start Screen");
         }
 
-        SceneManager.LoadScene("Outro_Scene");
+        SceneManager.LoadScene("Start Screen");
         
         yield return null;
     }
