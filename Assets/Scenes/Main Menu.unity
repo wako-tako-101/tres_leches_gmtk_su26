@@ -1389,8 +1389,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 128600003}
   levelAudio:
-  - sceneName: Start Screen
-    music: {fileID: 0}
   - sceneName: Main Menu
     music: {fileID: 8300000, guid: 3edfd6b7a9f9e1e4294b8383800a3260, type: 3}
   - sceneName: Calculator Scene
